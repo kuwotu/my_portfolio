@@ -1,5 +1,6 @@
-import Intro from "./intro.js";
 import React from "react";
+import Intro from "./Intro.js";
+import Header from "./Header.js";
 
 function App() {
   const [introPic, setIntroPic] = React.useState("/kevwe-prof.jpg");
@@ -17,7 +18,8 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App--container">
+      <Header />
       <Intro
         introPic={introPic}
         homePic={homePic}
