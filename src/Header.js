@@ -2,7 +2,10 @@ export default function Header() {
   return (
     <header className="Header--header">
       <nav className="Header--nav">
-        <div className="Header--logo">Logo</div>
+        <div className="Header--logo">
+          <p>Kevwe Uwotu</p>
+          <p>Front-End Developer</p>
+        </div>
         <div className="Header--menu">
           <ol className="Header--menu-list">
             <li className="Header--about-li">

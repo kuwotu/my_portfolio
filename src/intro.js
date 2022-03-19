@@ -1,52 +1,28 @@
-import { Controller, Scene } from "react-scrollmagic";
+import speaker from "./images/Intro--speaker.png";
 
 export default function Intro(props) {
   return (
     <section className="Intro--container">
-      <Controller>
-        <div className="Intro--about-container">
-          <div className="Intro--about-div">
-            <p className="Intro--paragraph">Hi there 👋🏾 I'm Kevwe.</p>
-            <p className="Intro--paragraph">
-              I express my creativity through code, focusing on building
-              captivating digital experiences.
+      <div className="Intro--about-container">
+        <div className="Intro--about-div">
+          <p id="Intro--Hi">Hi, I'm</p>
+          <div className="Intro--name">
+            <p className="Intro--paragraph" id="Intro--Kevwe">
+              Kevwe
             </p>
+            <img className="Intro--speaker" src={speaker}></img>
+            <p id="Intro--pronounced">pronounced “Keh-weh”</p>
           </div>
-          <div className="Intro--about-div">
-            <p className="Intro--paragraph">
-              A few facts about me :
-              <ol className="Intro--facts-list">
-                <li
-                  className="Intro--american-football"
-                  onMouseEnter={props.americanFootballPic}
-                  onMouseLeave={props.homePic}
-                >
-                  I played American Football throughout University.
-                </li>
-                <li
-                  className="Intro--plane"
-                  onMouseEnter={props.planePic}
-                  onMouseLeave={props.homePic}
-                >
-                  I've jumped out of a plane.
-                </li>
-                <li className="Intro--music">I'm a huge music fan.</li>
-              </ol>
-            </p>
-          </div>
-
-          <div className="Intro--about-div">
-            <p className="Intro--paragraph">
-              Check out what I'm listening to right now.
-            </p>
-          </div>
+          <p className="Intro--paragraph">a</p>
+          <p className="Intro--paragraph">
+            I express my creativity through code, focusing on building
+            captivating digital experiences.
+          </p>
         </div>
-        <Scene duration={"200%"} pin={{ pushFollowers: false }} triggerHook={0}>
-          <div className="Intro--img-container">
-            <img className="Intro--img" src={props.introPic} alt="Logo"></img>
-          </div>
-        </Scene>
-      </Controller>
+      </div>
+      <div className="Intro--img-container">
+        <img className="Intro--img" src={props.introPic} alt="Logo"></img>
+      </div>
     </section>
   );
 }

@@ -29,6 +29,18 @@ code {
   background-color: rgb(251, 251, 251);
 }
 
+.Header--logo {
+  padding: 10px;
+}
+
+.Header--logo:hover {
+  cursor: pointer;
+}
+
+.Header--logo p {
+  margin: 0;
+}
+
 .Header--menu {
   display: flex;
   align-items: center;
@@ -51,7 +63,7 @@ code {
 .Header--about-li ::before,
 .Header--projects-li ::before,
 .Header--contact-li ::before {
-  color: #34675c;
+  color: rgb(1, 191, 155);
   display: inline-block;
   width: 0.5em;
   margin-right: 1em;
@@ -71,29 +83,31 @@ code {
 
 .Header--menu-list a {
   text-decoration: none;
-  color: rgb(15, 52, 166);
+  color: rgb(45, 47, 46);
 }
 
-.Header--button-resume {
+.Header--button-resume,
+.About--button {
   height: 30px;
   background-color: whitesmoke;
   border: none;
   border-radius: 5px;
-  border: 1px solid rgb(15, 52, 166);
-  color: rgb(15, 52, 166);
+  border: 1px solid rgb(1, 191, 155);
+  color: rgb(45, 47, 46);
 }
 
-.Header--button-resume:hover {
+.Header--button-resume:hover,
+.About--button:hover {
   cursor: pointer;
-  background-color: rgba(15, 52, 166, 0.1);
+  background-color: rgba(242, 243, 229, 0.5);
   transition-delay: 0.3s;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .Intro--container {
   display: flex;
   padding: 0px 10px;
-  height: 300vh;
+  height: 100vh;
   margin: 0;
 }
 
@@ -121,9 +135,24 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   overflow: hidden;
+}
+
+.Intro--name {
+  display: flex;
+  align-items: center;
+}
+
+.Intro--speaker {
+  padding-left: 30px;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.Intro--speaker:hover {
+  cursor: pointer;
 }
 
 .Intro--text-change-container {
@@ -135,11 +164,24 @@ code {
 
 .Intro--paragraph {
   position: relative;
-  text-align: center;
   font-size: 26px;
-  margin-top: 5px;
   line-height: 1.6;
-  color: rgb(15, 52, 166);
+  color: rgb(45, 47, 46);
+  padding-top: 3px;
+  padding-left: 30px;
+  margin: 0;
+}
+
+#Intro--Hi,
+#Intro--pronounced {
+  font-size: 0.9em;
+  color: rgb(1, 191, 155);
+  padding-left: 30px;
+  margin: 0;
+}
+
+#Intro--Kevwe {
+  font-size: 4em;
 }
 
 .Intro--american-football {
@@ -170,4 +212,95 @@ code {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🎵</text></svg>")
       16 0,
     auto;
+}
+
+.content-title {
+  color: rgb(1, 191, 155);
+  padding: 0px 0px 30px 30px;
+  margin: 0;
+}
+
+.About--button-container {
+  height: 50px;
+  width: 400px;
+  padding-left: 30px;
+}
+
+.About--button {
+  margin-right: 20px;
+}
+
+.About--info {
+  width: 80%;
+  padding: 0px 0px 30px 30px;
+}
+
+.Project--container {
+  display: flex;
+  padding: 20px 0px 0px 30px;
+  margin: 0px;
+}
+
+.Project--img {
+  width: 400px;
+  height: 200px;
+}
+
+.Project--featured {
+  font-size: 0.9em;
+}
+
+#projectTitle1,
+#projectTitle3 {
+  padding-left: 700px;
+}
+
+#projectTitle2 {
+  padding-right: 700px;
+}
+
+.Project--name {
+  color: rgb(1, 191, 155);
+  font-size: 1.2em;
+}
+
+.Project--info {
+  width: 700px;
+}
+
+#projectInfo1,
+#projectInfo3 {
+  padding-left: 30px;
+  margin: 0;
+}
+
+#projectInfo2 {
+  margin: 0;
+}
+
+.Contact--container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contact--title {
+  color: rgb(1, 191, 155);
+}
+
+.Contact--icons-container {
+  width: 200px;
+
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(1, 191, 155);
+}
+
+.Contact--icons {
+  font-size: 1.5em;
+}
+
+.Contact--icons:hover {
+  cursor: pointer;
 }
