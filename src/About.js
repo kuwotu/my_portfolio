@@ -2,7 +2,7 @@ export default function About(props) {
   const { aboutMe, shortAndSweet, tellMeMore, tellMeEverything } = props;
 
   return (
-    <div>
+    <div className="About--container">
       <h1 className="content-title">About Me</h1>
       <div className="About--button-container">
         <button onClick={shortAndSweet} className="About--button">

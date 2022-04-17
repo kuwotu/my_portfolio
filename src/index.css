@@ -14,7 +14,8 @@ code {
 .App--container {
   background-color: rgb(251, 251, 251);
   margin: 15px;
-  height: 100%;
+  padding: 15px;
+  max-width: 1450px;
 }
 
 .Header--header {
@@ -44,18 +45,19 @@ code {
 .Header--menu {
   display: flex;
   align-items: center;
-  width: 500px;
-
+  max-width: 500px;
   justify-content: space-evenly;
+  padding-right: 10px;
 }
 
 .Header--menu-list {
   display: flex;
   justify-content: space-evenly;
-  width: 300px;
+  max-width: 400px;
   position: relative;
   margin-left: 0;
-  padding-left: 1.2em;
+  padding-left: 0;
+  padding-right: 20px;
   color: rgb(15, 52, 166);
   list-style: none;
 }
@@ -65,8 +67,7 @@ code {
 .Header--contact-li ::before {
   color: rgb(1, 191, 155);
   display: inline-block;
-  width: 0.5em;
-  margin-right: 1em;
+  padding-right: 5px;
 }
 
 .Header--about-li ::before {
@@ -84,11 +85,11 @@ code {
 .Header--menu-list a {
   text-decoration: none;
   color: rgb(45, 47, 46);
+  padding: 0px 10px;
 }
 
 .Header--button-resume,
 .About--button {
-  height: 30px;
   background-color: whitesmoke;
   border: none;
   border-radius: 5px;
@@ -107,13 +108,13 @@ code {
 .Intro--container {
   display: flex;
   padding: 0px 10px;
-  height: 100vh;
+  max-height: 100vh;
   margin: 0;
 }
 
 .Intro--img-container {
-  width: 50%;
-  height: 100vh;
+  max-width: 800px;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,13 +122,15 @@ code {
 }
 
 .Intro--img {
-  width: 520px;
-  height: 350px;
+  max-width: 520px;
   border-radius: 10px;
+  margin-left: 20px;
+  object-fit: fill;
+  height: auto;
 }
 
 .Intro--about-container {
-  width: 50%;
+  max-width: 800px;
 }
 
 .Intro--about-div {
@@ -145,10 +148,10 @@ code {
 }
 
 .Intro--speaker {
-  padding-left: 30px;
   margin: 0;
   width: 50px;
   height: 50px;
+  padding: 0px 30px;
 }
 
 .Intro--speaker:hover {
@@ -168,7 +171,7 @@ code {
   line-height: 1.6;
   color: rgb(45, 47, 46);
   padding-top: 3px;
-  padding-left: 30px;
+
   margin: 0;
 }
 
@@ -176,7 +179,7 @@ code {
 #Intro--pronounced {
   font-size: 0.9em;
   color: rgb(1, 191, 155);
-  padding-left: 30px;
+
   margin: 0;
 }
 
@@ -216,47 +219,58 @@ code {
 
 .content-title {
   color: rgb(1, 191, 155);
-  padding: 0px 0px 30px 30px;
+  padding: 0px 0px 30px 0px;
   margin: 0;
 }
 
 .About--button-container {
   height: 50px;
   width: 400px;
-  padding-left: 30px;
 }
 
 .About--button {
   margin-right: 20px;
 }
 
-.About--info {
-  width: 80%;
-  padding: 0px 0px 30px 30px;
+.About--button:last-child {
+  margin-right: 0px;
 }
 
-.Project--container {
+.About--info {
+  padding: 0px 0px 30px 0px;
+}
+
+.Projects--div {
+  padding-bottom: 50px;
+}
+
+.Projects--img-and-info-container {
   display: flex;
-  padding: 20px 0px 0px 30px;
+  padding: 20px 0px 0px 0px;
   margin: 0px;
 }
 
 .Project--img {
-  width: 400px;
-  height: 200px;
+  max-width: 420px;
+  height: auto;
+  object-fit: fill;
 }
 
-.Project--featured {
-  font-size: 0.9em;
+.Project--title-and-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
 }
 
-#projectTitle1,
-#projectTitle3 {
-  padding-left: 700px;
+.Project--info-title {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-#projectTitle2 {
-  padding-right: 700px;
+.Project--info-description {
+  line-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .Project--name {
@@ -270,7 +284,6 @@ code {
 
 #projectInfo1,
 #projectInfo3 {
-  padding-left: 30px;
   margin: 0;
 }
 
@@ -303,4 +316,126 @@ code {
 
 .Contact--icons:hover {
   cursor: pointer;
+}
+
+.Contact--number-container {
+  background-color: white;
+}
+
+.Contact--call-me {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(1, 191, 155);
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1010px) {
+  .Intro--container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-height: 500px;
+    padding-top: 300px;
+  }
+
+  .Intro--about-div {
+    max-height: 400px;
+    text-align: center;
+  }
+
+  .Intro--paragraph {
+    padding-left: 0px;
+  }
+
+  .Intro--name {
+    justify-content: center;
+  }
+
+  .About--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .About--button-container {
+    width: auto;
+    margin: auto;
+  }
+
+  .content-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Projects--img-and-info-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .Projects--div {
+    padding-bottom: 20px;
+  }
+
+  .Project--title-and-info-container h1 {
+    padding-top: 10px;
+    align-self: start;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .Intro--img {
+    max-width: 420px;
+  }
+
+  .Header--nav {
+    background-color: red;
+    position: fixed;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Intro--img {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Intro--img {
+    max-width: 320px;
+  }
+  .Intro--name,
+  .About--button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .Intro--speaker {
+    margin: auto;
+  }
+
+  #Intro--pronounced {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .About--button {
+    height: 20px;
+  }
+
+  .About--info {
+    padding-top: 30px;
+  }
+
+  .About--button:nth-child(2) {
+    margin-right: 0px;
+  }
+
+  .About--button:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }

@@ -24,7 +24,9 @@ export default function Contact() {
         ></FontAwesomeIcon>
       </div>
       <p className="Contact--call-me">Call me</p>
-      <p className="Contact--number">07958086599</p>
+      <div className="Contact--number-container">
+        <p className="Contact--number">07958086599</p>
+      </div>
     </div>
   );
 }

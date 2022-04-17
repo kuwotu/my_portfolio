@@ -1,4 +1,5 @@
 import speaker from "./images/Intro--speaker.png";
+import kevweSound from "./audio/Kevwe-pronounciation.mp3";
 
 export default function Intro(props) {
   return (
@@ -10,7 +11,11 @@ export default function Intro(props) {
             <p className="Intro--paragraph" id="Intro--Kevwe">
               Kevwe
             </p>
-            <img className="Intro--speaker" src={speaker}></img>
+            <img
+              className="Intro--speaker"
+              src={speaker}
+              onClick={() => new Audio(kevweSound).play()}
+            ></img>
             <p id="Intro--pronounced">pronounced “Keh-weh”</p>
           </div>
           <p className="Intro--paragraph">a</p>

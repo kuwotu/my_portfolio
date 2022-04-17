@@ -27,14 +27,23 @@ export default function ProjectsTwo() {
 
   const projectsElements = projects.map((project) => {
     return (
-      <div key={project.id}>
-        <p>Featured Post</p>
-        <h1>{project.title}</h1>
-        <img src={project.image}></img>
-        <p>{project.info}</p>
+      <div key={project.id} className="Projects--div">
+        <div className="Projects--img-and-info-container">
+          <img className="Project--img" src={project.image}></img>
+          <div className="Project--title-and-info-container">
+            <h1 className="Project--info-title">{project.title}</h1>
+            <p className="Project--info-description">{project.info}</p>
+            <button>View {project.title}</button>
+          </div>
+        </div>
       </div>
     );
   });
 
-  return <div>{projectsElements}</div>;
+  return (
+    <div className="Project--container">
+      <h1 className="content-title">Projects</h1>
+      {projectsElements}
+    </div>
+  );
 }
